@@ -316,7 +316,9 @@ void intro(){
     cout<<"The number of whites signifies how many of your pegs are a color that's \n";
     cout<<"in the code but in the wrong place.\n";
     cout<<"In this version there will be no duplicate pegs involved in the code\n";
-    cout<<"You will have 8 turns to crack the code. Good luck!\n";
+    cout<<"You will have 8 turns to crack the code.\n";
+    cout<<"A sample of inputs and outputs would look like.\n";
+    
 }
 //Sorting High scores
 void scorSrt(int a[],string b[],int n){
