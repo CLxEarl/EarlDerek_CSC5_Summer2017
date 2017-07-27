@@ -122,7 +122,7 @@ int main(int argc, char** argv) {
             y=0;
             
 
-            //cout<<correct[0]<<correct[1]<<correct[2]<<correct[3]; //Correct answers shown for testing
+            cout<<correct[0]<<correct[1]<<correct[2]<<correct[3]; //Correct answers shown for testing
 
             cout<<"You're on turn "<<trnctr<<endl;
 
@@ -164,17 +164,20 @@ int main(int argc, char** argv) {
                 }
             //This determines number of correct colors but wrong position
             if (guess[0]==correct[1]
-            && correct[1]!=guess[1]){
+                && correct[1]!=guess[1]
+                && stpWht1<1){
                 whtctr++;
                 stpWht1++;
                 }
             if(guess[0]==correct[2]&&
-                    guess[2]!=correct[2]){
+                    guess[2]!=correct[2]
+                    &&stpWht2<1){
                 whtctr++;
                 stpWht2++;
                 }
             if(guess[0]==correct[3]&&
-                guess[3]!=correct[3]){
+                guess[3]!=correct[3]
+                 &&stpWht3<1){
                 whtctr++;
                 stpWht3++;
                 }
@@ -188,6 +191,7 @@ int main(int argc, char** argv) {
                guess[2]!=correct[2]&&                    
                stpWht2<1){
                     whtctr++;
+                    stpWht2++;
             }
             if(guess[1]==correct[3]&&
                     guess[3]!=correct[3]
@@ -199,6 +203,7 @@ int main(int argc, char** argv) {
                     guess[0]!=correct[0]
                     && stpWht0<1){
                 whtctr++;
+                stpWht0++;
                 }
             if(guess[2]==correct[1]&&
                     guess[1]!=correct[1]
@@ -230,14 +235,17 @@ int main(int argc, char** argv) {
                 whtctr++;
                 stpWht2++;
                 }
+            //cout<<"Y "<<y<<endl;
             //PRINT OUT W's
             for (int i=0;i<whtctr;i++){
                 gameBrd[x+1][y]='W';
                 y++;
+                
             }
             //PRINT OUT B's
             for (int i=0;i<blkctr;i++){ 
                 gameBrd[x+1][y]='B';
+                y++;
             }
             cout<<"GAME BOARD"<<endl;
             //THIS IS HOW I WILL OUTPUT THE GAME BOARD 
@@ -247,6 +255,10 @@ int main(int argc, char** argv) {
                 }
                 cout<<endl;
             }
+            //cout<<"STOPWHITES "<<stpWht0<<" "<<stpWht1<<" "<<stpWht2<<" "<<stpWht3<<endl;
+            //cout<<"BLACK COUNTER "<<blkctr<<endl;
+            //cout<<"WHITE COUNTER "<<whtctr<<endl;
+            //cout<<"Y again "<<y<<endl;
             cout<<endl;
             x+=2;
             
@@ -255,6 +267,10 @@ int main(int argc, char** argv) {
         //to print correct code
         for(int i=0;i<4;i++){
         cout<<correct[i];
+        }
+        //for the laughs
+        if (correct[0]=='O'&& correct[1]=='R'&& correct[2]=='G' &&correct[3]=='Y'){
+            cout<<"  *ahem*  ...This is awkward...";
         }
         cout<<endl;
         //reflects win state
