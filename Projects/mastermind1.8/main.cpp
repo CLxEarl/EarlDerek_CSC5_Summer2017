@@ -42,7 +42,7 @@ int main(int argc, char** argv) {
     int x=0,y=0;
     char gameBrd [rows][column];
 
-    
+    srand(time(0));//setting time
     intro();
 
     cout<<endl<<endl;
@@ -54,8 +54,7 @@ int main(int argc, char** argv) {
     while (again){
         
         trnctr=0; //resets turns to zero
-        gmctr++; //game counter to find win/loss ratio later
-        srand(time(0));//setting time
+        gmctr++; //game counter to find win/loss ratio later       
         correct[0]='A';
         correct[1]='X';
         correct[2]='Q';
@@ -122,7 +121,7 @@ int main(int argc, char** argv) {
             y=0;
             
 
-            cout<<correct[0]<<correct[1]<<correct[2]<<correct[3]; //Correct answers shown for testing
+            //cout<<correct[0]<<correct[1]<<correct[2]<<correct[3]; //Correct answers shown for testing
 
             cout<<"You're on turn "<<trnctr<<endl;
 
@@ -357,7 +356,7 @@ void intro(){
     cout<<"You will have 8 turns to crack the code.\n";   
     
 }
-//Sorting High scores
+//Sorting High scores using bubble sort
 void scorSrt(int a[],string b[],int n){
     for(int i=0;i<n-1;i++){
         for(int j=i+1;j<n;j++){
