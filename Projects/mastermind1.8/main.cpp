@@ -242,7 +242,7 @@ int main(int argc, char** argv) {
             cout<<"GAME BOARD"<<endl;
             //THIS IS HOW I WILL OUTPUT THE GAME BOARD 
             for(int i=19;i>-1;i--){
-                for (int j=3;j>-1;j--){
+                for (int j=0;j<4;j++){
                     cout<<gameBrd[i][j];      
                 }
                 cout<<endl;
