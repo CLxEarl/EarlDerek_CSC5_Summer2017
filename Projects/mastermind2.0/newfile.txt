@@ -14,4 +14,5 @@ player 8
 player 8
 player 8
 player 8
-KORD         1
+ Derek         8 
+Derek         6
